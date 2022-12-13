@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <form id="frm">
+        <div id="container">
+            <h1>Minha calculadora</h1>
+        </div>
+
+        <div id="left">
+            <div class="bloco">
+                <span>Nome:</span>
+                <input type="text" name="txtnome" placeholder="Digite seu nome">
+                <input type="button" value="enviar" onclick="ola()">
+            </div>
+
+            <div class="bloco1">
+                <span>Preencha os números</span> <br>
+                <input type="text" size="2" id="n1" placeholder="n1"> 
+                <br>
+                <input type="text" size="2" id="n2" placeholder="n2">
+                <br><br>
+
+                <input type="button" value="+" onclick="calc(this)">
+
+                <input type="button" value="-" onclick="calc(this)">
+
+                <input type="button" value="*" onclick="calc(this)">
+
+                <input type="button" value="/" onclick="calc(this)">
+
+                <input type="button" value="%   " onclick="calc(this)">
+                <br><br>
+                <input type="button" value="Limpar" onclick="limpar()"/>
+            </div>
+
+        </div>
+
+    </form>
+<script src="./calc.js"></script>
+</body>
+
+</html>
