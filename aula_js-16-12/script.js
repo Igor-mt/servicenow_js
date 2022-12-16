@@ -1,32 +1,32 @@
-// break
+break
 
-// var b = 1;
-// for ( ; ; ){
-//     document.write("<p>"+ b + "</p>");
-//     if (b === 10 ){
-//         break;
-//     };
-//     b++;
-// }
+var b = 1;
+for ( ; ; ){
+    document.write("<p>"+ b + "</p>");
+    if (b === 10 ){
+        break;
+    };
+    b++;
+}
 
-// for (var y = 0; y < 20; y++ ){
-//     if (y % 2){
-//         continue;
-//     }
-//     document.write(+ y + "-");
-// }
+for (var y = 0; y < 20; y++ ){
+    if (y % 2){
+        continue;
+    }
+    document.write(+ y + "-");
+}
 
-//ARRAYs (VETORES)
+ARRAYs (VETORES)
 
-// meuArray1 = new Array();//SEM DIMENSIONAMENTO
+meuArray1 = new Array();//SEM DIMENSIONAMENTO
 
-// meuArray2 = new Array(5);//COM DIMENSIONAMENTO
+meuArray2 = new Array(5);//COM DIMENSIONAMENTO
 
-// meuArray3 = new Array("Victor", 1234, "88888", "Maria", 10.99); //COM VALORES INSERIDOS
+meuArray3 = new Array("Victor", 1234, "88888", "Maria", 10.99); //COM VALORES INSERIDOS
 
-// alert (meuArray3[0])
+alert (meuArray3[0])
 
-//ARRAY ASSOSSIATIVOS
+ARRAY ASSOSSIATIVOS
 
 meuArray4 = {"cahve1":"victor", "rua":"rua sem saida", "bairro":"las vegas", "cidade":"Bvg"}
 
