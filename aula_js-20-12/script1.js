@@ -161,11 +161,30 @@
 
 // 10 - Escreva uma função que mostre na tela um número fornecido pelo usuário, porém invertido. Por exemplo, o usuário fornece o número 875 e a função mostra na tela o número 578.
 
-num = parseInt(prompt("Digite um numero"));
-const reversedNum = num => parseFloat(num.toString().split('').reverse().join('')) * Math.sign(num)
+// var rec = parseInt(prompt("Digite um numero qualquer")); - 1 2 3
 
-alert(num);
+// function invert(a){
+//     return(
+//     parseFloat(
+//         a.toString().split('').reverse().join(''))*Math.sign(a)); 
+// };
+
+// alert(invert(rec));
 
 // **-------------------------------** //
 
 // 11 - Escreva uma função que verifica se um número fornecido pelo usuário em um prompt é primo ou não.
+
+var number = parseInt(prompt("Digite um numero: "));
+var divisores = 0;
+
+for (var count = 1; count <= number; count++)
+    if (number % count == 0)
+        divisores++;
+
+if (divisores == 2){
+    alert(`O numero ${number} é um numero primo`);
+}
+else {
+    alert(`O numero ${number} NÃO é um numero primo`);
+}
