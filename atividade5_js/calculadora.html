@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculadora.css">
+    <title>Calculadora - Cientifica</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bloco1">
+            <div>
+                <h1>Calculadora Cientifica</h1>
+            </div><br>
+            <!-- <span></span><br> -->
+
+            <table>
+                <input type="number" size="2" class="visor" id="num1" placeholder="Primeiro Numero">
+                <br><br>
+
+                <input type="number" size="2" class="visor" id="num2" placeholder="Segundo Número">
+                <br><br>
+
+                <input disabled="disabled" name="resultado" class="visor" id="resultado" placeholder="Resultado" />
+                <br><br>
+
+                <input type="button" value="C" onclick="limpar()" class="limpeza"><br><br>
+
+                <input type="button" value="sin" onclick="sin()">
+
+                <input type="button" value="cos" onclick="cos()">
+
+                <input type="button" value="tan" onclick="tan()">
+                <br><br>
+
+                <input type="button" value="x^" onclick="expo()">
+
+                <input type="button" value="&#8730" onclick="raiz()">
+
+                <input type="button" value="%" onclick="percent()">
+                <br><br>
+
+                <input type="button" value="+" onclick="somar()">
+
+                <input type="button" value="-" onclick="sub()">
+
+                <input type="button" value="*" onclick="multi()">
+
+                <input type="button" value="/" onclick="div()">
+
+                <br><br>
+
+
+            </table>
+        </div>
+    </div>
+    <script src="calculadora.js"></script>
+</body>
+
+</html>
