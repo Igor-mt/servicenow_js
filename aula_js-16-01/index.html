@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script type="text/javascript">
+        function over(){
+            document.write("Queijo é massa! - Mouse Over")
+        }
+
+        function out(){
+            document.write("O doce de leite de Minas é o melhor! - Mouse Out")
+        }
+
+    </script> -->
+
+</head>
+
+<body onload="checkCookies()">
+    <!-- <p>Arraste o seu mouse para dentro da DIV para ver o resultado</p>
+    <div onmouseout="out()">
+        <h2>Agora você está dentro da DIV selecionada!</h2>
+    </div>
+    <div onmouseover="over()">
+        <h2>Agora você está dentro da DIV selecionada!</h2>
+    </div> -->
+
+    <!-- <h1 onclick="this.innerHTML = 'isso ocorre quando a gente usa o evento onClick!'">Clique aqui para testar</h1> -->
+
+    <!-- <script>
+        function checkCookies(){
+            if (navigator.cookieEnabled==true){
+                alert ("Cookies são permitidos!")
+            }
+            else{
+                alert("Cookies não são permitidos!")
+            }
+        }
+
+    </script>
+    <p>Irá aparecer a mensagem se os cookies são permitidos ou não!</p> -->
+    <!-- 
+    <script>
+        function minhaFuncao(){
+            var x = document.getElementById('fname');
+            x.valeu = x.value.toUpperCase();
+        }
+     </script>
+
+     Insira seu nome: <input type="text" id="fname" onchange="minhaFuncao()">
+
+     <p>Ao clicar fora do input o texto escrito ficara em caixa alta!</p> -->
+<!-- 
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: #D04a38; 
+     width: 120px; height: 20px; padding: 40px;">Passe o mouse aqui</div>
+
+     <script>
+        function mOver(obj){
+            obj.innerHTML="Obrigado"
+        }
+        function mOut(obj){
+            obj.innerHTML="Passe o mouse em mim!"
+        }
+     </script> -->
+
+     <!-- ONmousedown, onmouseup, onclick -->
+
+     <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color: #D04a38; width: 120px; height: 20px; padding: 40px;">Passe o mouse aqui</div>
+
+     <script>
+        function mDown(obj){
+            obj.style.backgroundColor="#1ec5e5";
+            obj.innerHTML="Solte o clique"
+        };
+        function mUp(obj){
+            obj.style.backgroundColor="#76d938";
+            obj.innerHTML="Obrigado!"
+        };
+        function mOver(obj){
+            obj.style.backgroundColor="#76D";
+            obj.innerHTML="Obrigado!"
+        };
+        function mOut(obj){
+            obj.innerHTML="Passe o mouse aqui"
+        };
+     </script>
+
+</body>
+
+</html>
