@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            margin: 12px;
+            color: #239, 213, 87
+        }
+
+        ;
+    </style>
+
+</head>
+
+<body>
+    <!-- 
+    <button>Botão 01</button>
+    <button>Botão 02</button>
+    <button>Botão 03</button>
+    <button>Botão 04</button> -->
+
+    <!-- addEnventListener()
+removeEventListener() -->
+    <button>Mudar Cor</button>
+    <script>
+        const btn = document.querySelector('button');
+
+        function random(number) {
+            return Math.floor(Math.random() * number + 1)
+        };
+        // function bgChange() {
+        //     var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' +
+        //         random(255) + ')';
+        //     document.body.style.backgroundColor = rndCol;
+        // };
+        // USAR O ADDENETLISTENER
+        btn.addEventListener('click', () => {
+            const rdnCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+            alert(rdnCol);
+            document.body.style.backgroundColor = rdnCol;
+        });
+    </script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
