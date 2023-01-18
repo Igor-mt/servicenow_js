@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="application/javascript">
+        function setBodyAttr(attr, value) {
+            if (document.body) eval('document.body.' + attr + '="' + value + '"');
+            else noSupported();
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+    <!-- <script>
+        window.onload = function () {
+            var inserirTag = document.createElement('h1')
+            var inserirTag2 = document.createElement('h2')
+            var text_tag = document.createTextNode('Título Grande!')
+            var text_tag2 = document.createTextNode('Título ainda mais Grande!')
+            inserirTag.appendChild(text_tag)
+            inserirTag.appendChild(text_tag2)
+            document.body.appendChild(inserirTag)
+            document.body.appendChild(inserirTag2)
+        }
+    </script>
+
+    <script>
+        var tabela = document.getElementById("table");
+        var atribuidoTabela = tabela.attributes;
+        for (var i = 0; i < atribuidoTabela.length; i++){
+            if(atribuidoTabela[i].nodeName.toLocaleLowerCase()== "border"){
+                tabela.border = '1'
+            }
+        }
+    </script> -->
+
+    <div style="margin:.5in; height: 400;;">
+        <form>
+            <select onchange="setBodyAttr('text', this.options[this.selectedIndex].value);">
+                <option value="black">Preto</option>
+                <option value="darkblue">Azul Escuro</option>
+                <option value="pink">Pink</option>
+            </select>
+            <p><b><tt>bgColor</tt></b></p>
+
+            <select onchange="setBodyAttr('bgColor', this.options[this.selectedIndex].value);">
+                <option value="white">Branco</option>
+                <option value="lightgrey">Cinza</option>
+            </select>
+
+            <p><b><tt>Meu Link</tt></b></p>
+            <select onchange="setBodyAttr('link', this.options[this.selectorIndex].value);">
+                <option value="blue">Azul</option>
+                <option value="green">Verde</option>
+            </select>
+            <small><a href="https://soulcodeacademy.teachable.com/" id="exemplo"></a></small>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
