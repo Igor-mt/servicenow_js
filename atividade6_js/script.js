@@ -1,11 +1,17 @@
 // ####################### Desafio 01: Construir uma Escada ####################################
 
 // function escada(altura) {
+
 //     var escada = [];
+
 //     for (var i = 1; i <= altura; i++) {
+
 //       escada.push(' '.repeat(altura - i) + 'I'.repeat(i));
+
 //     }
+
 //     return escada;
+
 //   }
 
 //   console.table(escada(10));
@@ -14,15 +20,24 @@
 // ######################### Desafio 02: Árvore Utópica ######################################
 
 // function arvoreSoul(fases) {
+
 //     var tam = 1;
+
 //     for (var i = 1; i <= fases; i++) {
+
 //         if (i % 2 === 0) {
+
 //             tam += 1;
+
 //         } else {
+
 //             tam *= 2;
+
 //         }
 //     }
+
 //     return tam;
+
 // }
 
 
@@ -72,17 +87,28 @@
 // ############################## Desafio 04: Produto ########################//
 
 // function produto(num) {
+
 //   var resultado = 1;
+
 //   for (var i = 0; i < num.length; i++) {
+
 //     resultado *= num[i];
+
 //   }
+
 //   return resultado;
+
 // }
+
 // console.log(produto([1, 4, 7])); //28
+
 
 // Ou podemos utilizar o método com o "Reduce". Esse método foi encotrado na internet, então por gentileza, considere a resposta anterior.
 
 // function produto(num) {
+
 //   return num.reduce((a, b) => a * b);
+
 // }
+
 // console.log(produto([1, 4, 7])); //28
