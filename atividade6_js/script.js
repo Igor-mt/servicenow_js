@@ -36,63 +36,53 @@
 
 // ################# Desafio 03: Mais Menos (Porcentagem de elementos) #########################
 
-// function maisMenos(arr) {
+// function maisMenos(num) {
+
 //     var positivos = 0;
+
 //     var zeros = 0;
+
 //     var negativos = 0;
-//     for (var i = 0; i < arr.length; i++) {
-//         if (arr[i] > 0) {
+
+//     for (var i = 0; i < num.length; i++) {
+
+//         if (num[i] > 0) {
+
 //             positivos++;
-//         } else if (arr[i] === 0) {
+
+//         } else if (num[i] === 0) {
+
 //             zeros++;
+
 //         } else {
+
 //             negativos++;
+
 //         }
 //     }
-//     return [positivos / arr.length, zeros / arr.length, negativos / arr.length];
-// }
 
-// console.log([1,-2,0,-3,1,0,1]);
-
-
-// function maisMenos(num1) {
-
-//     var qnt = num1.length
-
-//     var positivos = 0;
-//     var numzeros = 0;
-//     var numnegativos = 0;
-//     var i = 0;
-
-//     for (var i = 0; i < qnt; i++) {
-
-//         if (num1[i] < 0) {
-
-//             numnegativos = numnegativos + 1;
-
-//         } else if (num1[i] > 0) {
-
-//             positivos = positivos + 1;
-
-//         } else {
-
-//             numzeros = numzeros + 1;
-            
-//         }
-//     }
-    
-//     positivos = positivos / qnt;
-//     numzeros = numzeros / qnt;
-//     numnegativos = numnegativos / qnt;
-
-//     var total = [positivos, numzeros, numnegativos];
-
-//     return total;
+//     return [positivos / num.length, zeros / num.length, negativos / num.length];
 
 // }
 
-// console.log(maisMenos([-1, 2, 0, 10, -5]))
+// console.log(maisMenos([1, 2, 0, -1])); // [0.5, 0.25, 0.25]
 
 
 
 // ############################## Desafio 04: Produto ########################//
+
+// function produto(num) {
+//   var resultado = 1;
+//   for (var i = 0; i < num.length; i++) {
+//     resultado *= num[i];
+//   }
+//   return resultado;
+// }
+// console.log(produto([1, 4, 7])); //28
+
+// Ou podemos utilizar o método com o "Reduce". Esse método foi encotrado na internet, então por gentileza, considere a resposta anterior.
+
+// function produto(num) {
+//   return num.reduce((a, b) => a * b);
+// }
+// console.log(produto([1, 4, 7])); //28
