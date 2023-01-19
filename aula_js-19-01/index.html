@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando DOM</title>
+
+    <script>
+        function minhaFuncao() {
+            let x = document.getElementById('fname');
+            x.value = x.value.toUpperCase();
+            x.style.background = 'white'
+        }
+
+        function mudarCor() {
+            let x = document.getElementById('fname');
+            x.style.background = 'yellow'
+        }
+
+        function navegadorPreferido() {
+            prefer = document.forms[0].browsers.value
+            alert(`Voçê prefere o navegador ${prefer}`)
+        }
+    </script>
+
+</head>
+<body>
+    <!-- INTEGRAÇÃO DO DOM E EVENTS -->
+
+    Digite seu nome: <input type="text" id="fname" onblur="minhaFuncao()" onfocus="mudarCor()">
+    <p>Digite no campo aima</p>
+
+    <form>
+        escolha um navegador
+        <select id="browsers" onchange="navegadorPreferido()">
+            <option value="Chrome">Chrome</option>
+            <option value="Edge">Edge</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Opera">Opera</option>
+            <option value="Tor">Tor</option>
+        </select>
+    </form>
+    
+</body>
+</html>
