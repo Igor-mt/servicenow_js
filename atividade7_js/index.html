@@ -10,7 +10,7 @@
 
 <body>
 
-<!-- 
+    <!-- 
     <form id="mudacor">
         <input type="text">
         <input type="text">
@@ -30,12 +30,238 @@
             });
         }
     </script> -->
+    <!-- 
+
+    <form>
+        <label for="input">Insira aqui as varras e os numeros</label>
+        <input type="text" id="input" name="input">
+        <button type="button" onclick="SepararvarrasNumeros()">Separar</button>
+    </form>
+    <br>
+    <label>varras:</label>
+    <span id="varras"></span>
+    <br>
+    <label>Numeros:</label>
+    <span id="numeros"></span>
+    <script>
+        function SepararvarrasNumeros() {
+            var input = document.getElementById("input").value;
+            var varras = "";
+            var numeros = "";
+
+            for (var i = 0; i < input.length; i++) {
+                if (isNaN(input[i])) {
+                    varras += input[i];
+                } else {
+                    numeros += input[i];
+                }
+            }
+
+            document.getElementById("varras").innerHTML = varras;
+            document.getElementById("numeros").innerHTML = numeros;
+        }
+    </script> -->
+
+    <!-- <div>
+        <label for="valorMinimo">Valor minimo:</label>
+        <input type="numero" id="valorMinimo" name="valorMinimo" onchange="checkValues()">
+        <br>
+        <label for="valorMaximo">Valor Maximo:</label>
+        <input type="numero" id="valorMaximo" name="valorMaximo" onchange="checkValues()">
+    </div>
+    <br>
+    <br>
+    <button type="button" onclick="contarMultiplo()">Contagem Multiplos</button>
+    <br>
+    <br>
+    <label>Numeros Multiplos:</label>
+    <span id="resultado"></span>
+    <script>
+        function checkValues() {
+            var valorMin = document.getElementById("valorMinimo").value;
+            var valorMax = document.getElementById("valorMaximo").value;
+        }
+
+        function contarMultiplo() {
+            var valorMin = document.getElementById("valorMinimo").value;
+            var valorMax = document.getElementById("valorMaximo").value;
+            var contador = 0;
+
+            for (var i = valorMin; i <= valorMax; i++) {
+                if (i % 2 === 0 && i % 3 === 0) {
+                    contador++;
+                }
+            }
+
+            document.getElementById("resultado").innerHTML = contador;
+        }
+    </script> -->
+
+    <!-- <div id="Calculadora-Fatorial">
+        <label>Digite o numero:</label>
+        <input id="num-input" type="numero">
+        <button id="botao-calc" onclick="calculadora()">Calcular</button>
+        <p id="resultado"></p>
+    </div>
+    
+    <script>
+        function calculadora() {
+            var valorInput = document.getElementById("num-input").value;
+            if (!isNaN(valorInput)) {
+                var inicioTemp = performance.now();
+                var fatorial = 1;
+                for (var i = 1; i <= valorInput; i++) {
+                    fatorial *= i;
+                }
+                var fimTempo = performance.now();
+                var calcTemp = fimTempo - inicioTemp;
+                document.getElementById("resultado").innerHTML = `${valorInput}! = ${fatorial} (${calcTemp} milliseconds)`;
+            } else {
+                alert("Por favor, entre com numero válido.");
+            }
+        }
+    </script> -->
+
+    <!-- <div>
+        <button id="criarRelatorio">Criar relatório</button>
+        <div id="report"></div>
+    </div>
 
 
     <script>
-        
 
-    </script>
+        class Aluno {
+            constructor(numero) {
+                this._numero = numero;
+                this._nota = Symbol();
+                this.nota = Math.floor(Math.random() * 101);
+            }
+            get nota() {
+                return this._nota;
+            }
+            set nota(val) {
+                this._nota = val;
+            }
+        }
+
+        const createReport = () => {
+            let aprovados = 0;
+            let reprovados = 0;
+            const alunos = [];
+            for (let i = 1; i <= 20; i++) {
+                alunos.push(new Aluno(i));
+                if (alunos[i - 1].nota >= 60) {
+                    aprovados++;
+                } else {
+                    reprovados++;
+                }
+            }
+
+            console.log("Relatório de resultados");
+            alunos.forEach(aluno => {
+                console.log(`Aluno nr ${aluno._numero} - Nota ${aluno.nota} (${aluno.nota >= 60 ? "Aprovado" : "Reprovado"})`);
+            });
+            console.log(`Aprovados: ${aprovados} (${(aprovados / 20 * 100).toFixed(2)}%) | Reprovados: ${reprovados} (${(reprovados / 20 * 100).toFixed(2)}%)`);
+        };
+
+        const btn = document.getElementById("criarRelatorio");
+        btn.addEventListener("click", createReport);
+
+    </script> -->
+
+
+    <!-- <div>
+
+        <p id="resultado"></p>
+
+        <label for="box1">Quantidade de números</label>
+        <input type="number" id="box1" pattern="[0-9]*" placeholder="Apenas números">
+        <label for="box2">Valor Mínimo</label>
+        <input type="number" id="box2" pattern="[0-9]*" placeholder="Apenas números">
+        <label for="box3">Valor Máximo</label>
+        <input type="number" id="box3" pattern="[0-9]*" placeholder="Apenas números">
+
+        <div class="bot">
+            <button class="botao" onclick="imprimeArray()">Calcular</button>                   
+        </div>
+
+    </div>    
+
+    <script>
+
+    function imprimeArray(){
+            var quantidades = document.getElementById('box1').value;
+            var valorMin = document.getElementById('box2').value;
+            var valorMax = document.getElementById('box3').value;
+
+            if(valorMin < valorMax && (valorMax-valorMin) >= quantidades){
+            var recebe = [valorMin,valorMax];
+
+            for(var i = 1; i <= quantidades-2; i++){
+            recebe.push(Math.round(Math.random() * (valorMax - valorMin) + Number(valorMin)));
+            }
+            var ordem = recebe.sort((a,b) => {
+            return a-b
+            });
+            
+            var result = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = ordem;
+        } else{
+            var result1 = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = "Valores invalidos!";
+        }
+
+    }
+
+    </script> -->
+
+<!-- 
+    <div>
+        <h1>Triângulo</h1>
+        <p id="resultado"></p>
+        <div>
+            <label class="title" for="box1">Lado A</label>
+            <input type="number" id="box1" pattern="[0-9]*" placeholder="Apenas números">
+        </div>
+        <div>
+            <label class="title" for="box2">Lado B</label>
+            <input type="number" id="box2" pattern="[0-9]*" placeholder="Apenas números">
+        </div>
+        <div>
+            <label class="title" for="box3">Lado C</label>
+            <input type="number" id="box3" pattern="[0-9]*" placeholder="Apenas números">
+        </div>
+        <div class="bot">
+            <button class="botao" onclick="determineTriangulo()">Calcular</button>
+        </div>
+    </div>
+
+
+    <script>
+        function determineTriangulo() {
+            var lado1 = parseInt(document.getElementById('box1').value);
+            var lado2 = parseInt(document.getElementById('box2').value);
+            var lado3 = parseInt(document.getElementById('box3').value);
+            if (isNaN(lado1) || isNaN(lado2) || isNaN(lado3)) {
+                document.getElementById('resultado').innerHTML = "Insira apenas números válidos!";
+                return;
+            }
+            if (lado1 == lado2 && lado1 == lado3) {
+                document.getElementById('resultado').innerHTML = "Esse triângulo é Equilátero!";
+            } else if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3) {
+                document.getElementById('resultado').innerHTML = "Esse triângulo é Escaleno!";
+            } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+                document.getElementById('resultado').innerHTML = "Esse triângulo é Isósceles!";
+            } else {
+                document.getElementById('resultado').innerHTML = "Numeros Invalidos!";
+            }
+        }           
+    </script> -->
+
+
+
+
+
 
 </body>
 
