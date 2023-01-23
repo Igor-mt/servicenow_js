@@ -63,12 +63,12 @@
         }
     </script> -->
 
-    <!-- <div>
+    <div>
         <label for="valorMinimo">Valor minimo:</label>
-        <input type="numero" id="valorMinimo" name="valorMinimo" onchange="checkValues()">
+        <input type="numero" id="valorMinimo" name="valorMinimo">
         <br>
         <label for="valorMaximo">Valor Maximo:</label>
-        <input type="numero" id="valorMaximo" name="valorMaximo" onchange="checkValues()">
+        <input type="numero" id="valorMaximo" name="valorMaximo">
     </div>
     <br>
     <br>
@@ -87,16 +87,18 @@
             var valorMin = document.getElementById("valorMinimo").value;
             var valorMax = document.getElementById("valorMaximo").value;
             var contador = 0;
-
-            for (var i = valorMin; i <= valorMax; i++) {
-                if (i % 2 === 0 && i % 3 === 0) {
-                    contador++;
+            if (valorMin >= valorMax) {
+                alert("Valor invalido")
+            } else {
+                for (var i = valorMin; i <= valorMax; i++) {
+                    if (i % 2 === 0 && i % 3 === 0) {
+                        contador++;
+                    }
                 }
+                document.getElementById("resultado").innerHTML = contador;
             }
-
-            document.getElementById("resultado").innerHTML = contador;
         }
-    </script> -->
+    </script>
 
     <!-- <div id="Calculadora-Fatorial">
         <label>Digite o numero:</label>
@@ -216,7 +218,7 @@
 
     </script> -->
 
-<!-- 
+    <!-- 
     <div>
         <h1>Triângulo</h1>
         <p id="resultado"></p>
