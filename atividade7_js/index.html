@@ -30,34 +30,35 @@
             });
         }
     </script> -->
-    <!-- 
+
 
     <form>
-        <label for="input">Insira aqui as barras e os numeros</label>
+        <label for="input">Insira aqui as letras e os numeros</label>
         <input type="text" id="input" name="input">
-        <button type="button" onclick="SepararbarrasNumeros()">Separar</button>
+        <button type="button" onclick="SepararletrasNumeros()">Separar</button>
     </form>
     <br>
-    <label>barras:</label>
-    <span id="barras"></span>
+    <label>letras:</label>
+    <span id="letras"></span>
     <br>
     <label>Numeros:</label>
     <span id="numeros"></span>
+    
     <script>
-        function SepararbarrasNumeros() {
+        function SepararletrasNumeros() {
             var input = document.getElementById("input").value;
-            var barras = "";
+            var letras = "";
             var numeros = "";
 
             for (var i = 0; i < input.length; i++) {
                 if (isNaN(input[i])) {
-                    barras += input[i];
+                    letras += input[i];
                 } else {
                     numeros += input[i];
                 }
             }
 
-            document.getElementById("barras").innerHTML = barras;
+            document.getElementById("letras").innerHTML = letras;
             document.getElementById("numeros").innerHTML = numeros;
         }
     </script> -->
