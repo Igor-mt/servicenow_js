@@ -33,31 +33,31 @@
     <!-- 
 
     <form>
-        <label for="input">Insira aqui as varras e os numeros</label>
+        <label for="input">Insira aqui as barras e os numeros</label>
         <input type="text" id="input" name="input">
-        <button type="button" onclick="SepararvarrasNumeros()">Separar</button>
+        <button type="button" onclick="SepararbarrasNumeros()">Separar</button>
     </form>
     <br>
-    <label>varras:</label>
-    <span id="varras"></span>
+    <label>barras:</label>
+    <span id="barras"></span>
     <br>
     <label>Numeros:</label>
     <span id="numeros"></span>
     <script>
-        function SepararvarrasNumeros() {
+        function SepararbarrasNumeros() {
             var input = document.getElementById("input").value;
-            var varras = "";
+            var barras = "";
             var numeros = "";
 
             for (var i = 0; i < input.length; i++) {
                 if (isNaN(input[i])) {
-                    varras += input[i];
+                    barras += input[i];
                 } else {
                     numeros += input[i];
                 }
             }
 
-            document.getElementById("varras").innerHTML = varras;
+            document.getElementById("barras").innerHTML = barras;
             document.getElementById("numeros").innerHTML = numeros;
         }
     </script> -->
