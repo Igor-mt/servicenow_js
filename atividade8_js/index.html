@@ -70,8 +70,8 @@
         alert (FindIntersection(["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]))
 
         
-    </script> -->
-    <!-- Resolução apresentada pelo professor Adriano. FIM -->
+    </script>
+    Resolução apresentada pelo professor Adriano. FIM -->
 
 
     <!-- <script>
@@ -102,8 +102,11 @@
     <!-- ************************************ -->
     <!-- Exercicio 3 -->
 
-    <!-- <script>
+    <!-- <input type="text" id="stringInput" placeholder="Enter string here">
+    <button onclick="checkBrackets()">Checar</button>
+    <p id="result"></p>
 
+    <script>
         function BracketMatcher(string) {
             var conteudo = [];
             [...string].forEach(a => {
@@ -116,134 +119,142 @@
                 }
             });
             return conteudo.length === 0 ? 1 + " VERDADEIRO" : 0 + " FALSO";
+        }
 
+        function checkBrackets() {
+            var string = document.getElementById("stringInput").value;
+            var result = BracketMatcher(string);
+            document.getElementById("result").innerHTML = result;
+        }
     </script> -->
 
 
-    <!-- ************************************ -->
+
+
+    <!--   ************************************ -->
     <!-- Exercicio 4 -->
 
     <!-- <script>
-        function Validation(str) {
-            var condicao = /^[a-zA-Z]([a-zA-Z0-9_])*[a-zA-Z0-9]$/;
-            var underline = /^[a-zA-Z0-9_]+$/;
-            if (str[str.length - 1] === "_" || !underline.test(str) || str.length < 4 || str.length > 25 || !condicao.test(str)) {
-                alert("nome invalido");
-            } else {
-                alert(str + ": validado !");
-            }
-        }
-        Validation(prompt("Digite o nome do usuario:"))
-    </script> -->
+         function Validation(str) {
+             var condicao = /^[a-zA-Z]([a-zA-Z0-9_])*[a-zA-Z0-9]$/;
+             var underline = /^[a-zA-Z0-9_]+$/;
+             if (str[str.length - 1] === "_" || !underline.test(str) || str.length < 4 || str.length > 25 || !condicao.test(str)) {
+                 alert("nome invalido");
+             } else {
+                 alert(str + ": validado !");
+             }
+         }
+         Validation(prompt("Digite o nome do usuario:"))
+     </script> -->
 
 
 
     <!-- ************************************ -->
     <!-- Exercicio 5 -->
     <!-- 
-    <script>
-            const findIntersection = (strArr) => {
-                let newArr = []
-                let elem1 = strArr[0].split(',')
-                let elem2 = strArr[1].split(',')
+     <script>
+             const findIntersection = (strArr) => {
+                 let newArr = []
+                 let elem1 = strArr[0].split(',')
+                 let elem2 = strArr[1].split(',')
 
-                for (let i = 0; i < elem1.length; i++) {
-                    if (elem2.includes(elem1[i])) {
-                        newArr.push(elem1[i])
-                    }
-                }
-                if (newArr.length === 0) {
-                    return false
-                } else {
-                    return newArr.toLocaleString()
-                }
-            }
-            alert(findIntersection(['1, 3, 4, 7, 13', '1, 2, 4, 13, 15']))
-    </script> -->
+                 for (let i = 0; i < elem1.length; i++) {
+                     if (elem2.includes(elem1[i])) {
+                         newArr.push(elem1[i])
+                     }
+                 }
+                 if (newArr.length === 0) {
+                     return false
+                 } else {
+                     return newArr.toLocaleString()
+                 }
+             }
+             alert(findIntersection(['1, 3, 4, 7, 13', '1, 2, 4, 13, 15']))
+     </script> -->
 
     <!-- ************************************ -->
     <!-- Exercicio 6 -->
 
     <!-- 
-    <input type="text" id="input_string">
-    <button onclick="reverseString()">Inverter</button>
-    <p id="output"></p>
+     <input type="text" id="input_string">
+     <button onclick="reverseString()">Inverter</button>
+     <p id="output"></p>
 
-    <script>
-        function Reverter(str) {
-            return str.split('').reverse().join('');
-        }
+     <script>
+         function Reverter(str) {
+             return str.split('').reverse().join('');
+         }
 
-        function reverseString() {
-            var inputString = document.getElementById("input_string").value;
-            var outputString = Reverter(inputString);
-            document.getElementById("output").innerHTML = outputString;
-        }
-    </script> -->
+         function reverseString() {
+             var inputString = document.getElementById("input_string").value;
+             var outputString = Reverter(inputString);
+             document.getElementById("output").innerHTML = outputString;
+         }
+     </script> -->
 
 
     <!-- ************************************ -->
     <!-- Exercicio 7 -->
     <!-- <script>
-        function QuestionsMarks(string) {
-            var numeros = [];
-            var arrayStr = string;
-            var numIndex = [];
+         function QuestionsMarks(string) {
+             var numeros = [];
+             var arrayStr = string;
+             var numIndex = [];
 
-            var valorFinal = false;
-            for (var i = 0; i < arrayStr.length; i++) {
-                if (parseInt(arrayStr[i], 10)) {
-                    numeros.push(arrayStr[i]);
-                    numIndex.push({
-                        number: parseInt(arrayStr[i], 10),
-                        index: i,
-                    });
-                }
-            }
-            for (var a = 0; a < numIndex.length - 1; a++) {
-                if (numIndex[a].number + numIndex[a + 1].number === 10) {
-                    valorFinal = true;
-                    var subStr = arrayStr.substring(numIndex[a].index + 1, numIndex[a + 1].index);
-                    subStr = subStr.replace(/[a-zA-Z]/g, '');
-                    if (!subStr.includes('???')) {
-                        valorFinal = false;
-                        return false;
-                    }
-                }
-            }
-            return valorFinal;
-        }
-        var input = "acc?7??sss?3rr1??????5";
-        var result = QuestionsMarks(input);
-        document.write("Entrada: " + input + "<br>");
-        document.write("Saída: " + result);
-    </script> -->
+             var valorFinal = false;
+             for (var i = 0; i < arrayStr.length; i++) {
+                 if (parseInt(arrayStr[i], 10)) {
+                     numeros.push(arrayStr[i]);
+                     numIndex.push({
+                         number: parseInt(arrayStr[i], 10),
+                         index: i,
+                     });
+                 }
+             }
+             for (var a = 0; a < numIndex.length - 1; a++) {
+                 if (numIndex[a].number + numIndex[a + 1].number === 10) {
+                     valorFinal = true;
+                     var subStr = arrayStr.substring(numIndex[a].index + 1, numIndex[a + 1].index);
+                     subStr = subStr.replace(/[a-zA-Z]/g, '');
+                     if (!subStr.includes('???')) {
+                         valorFinal = false;
+                         return false;
+                     }
+                 }
+             }
+             return valorFinal;
+         }
+         var input = "acc?7??sss?3rr1??????5";
+         var result = QuestionsMarks(input);
+         document.write("Entrada: " + input + "<br>");
+         document.write("Saída: " + result);
+     </script> -->
 
     <!-- ************************************ -->
     <!-- Exercicio 8 -->
 
     <!-- <head>
-        <script>
-            function LongestWord(sen) {
-                const words = sen.split(" ");
-                var longestWord = "";
+         <script>
+             function LongestWord(sen) {
+                 const words = sen.split(" ");
+                 var longestWord = "";
     
-                words.forEach((word) => {
-                    if (longestWord.length < word.length) {
-                        longestWord = word;
-                    }
-                });
-                return longestWord;
-            }
-        </script>
-      </head>
-      <body>
-        <script>
-            var phrase = "Um ninho de mafagafos com cinco mafagafinhos";
-            var result = LongestWord(phrase);
-            document.write("A maior palavra é: " + result);
-        </script>
-      </body> -->
+                 words.forEach((word) => {
+                     if (longestWord.length < word.length) {
+                         longestWord = word;
+                     }
+                 });
+                 return longestWord;
+             }
+         </script>
+       </head>
+       <body>
+         <script>
+             var phrase = "Um ninho de mafagafos com cinco mafagafinhos";
+             var result = LongestWord(phrase);
+             document.write("A maior palavra é: " + result);
+         </script>
+       </body>
 
 </body>
 
